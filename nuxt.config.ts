@@ -2,5 +2,8 @@
 export default defineNuxtConfig({
   pages: true,
   css: ["~/assets/styles/global.scss"],
+  postcss: {
+    config: false,
+  },
   modules: ["@formkit/nuxt"],
 });

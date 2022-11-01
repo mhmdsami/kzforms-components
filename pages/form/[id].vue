@@ -22,8 +22,8 @@ const forms: Form[] = [
     { id: 3, type: "Button", attr: { content: "Lets Go!" } }],
     theme: {
       id: "1",
-      primary: "#C2C5BB",
-      secondary: "#77B28C"
+      primary: "#CED3DC",
+      secondary: "#95B46A"
     }
   },
   {
@@ -42,13 +42,17 @@ const forms: Form[] = [
 ]
 
 const form = forms.find((form) => form.id === id);
+
+onBeforeMount(() => {
+  document.documentElement.style.setProperty("--primary-color", form.theme.primary);
+  document.documentElement.style.setProperty("--secondary-color", form.theme.secondary);
+})
+
 </script>
   
 <style lang="scss">
-$bg-color: #C2C5BB;
-
 body {
-  background-color: $bg-color;
+  background-color: var(--primary-color);
 }
 
 .form {
