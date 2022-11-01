@@ -1,6 +1,28 @@
+$secondary: #77b28c;
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+.textfield {
+  display: flex;
+  padding: 7px;
+  min-width: 400px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: $secondary;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
